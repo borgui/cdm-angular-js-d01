@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="../js/angular.min.js"></script>
+	</head>
+	
+	<script>
+		var app = angular.module("app",[]);
+		app.controller("firstController", function($scope){
+		})
+	</script>
+	<body ng-app = "app" ng-controller = "firstController">
+		<form>
+			<input type="text" placeholder="Your name" ng-model="firstController.name">
+			<div style="margin-top:20px">
+				{{firstController.name | uppercase}}
+			</div>
+		</form>
+	</body>
+
+</html>

@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="../js/angular.min.js"></script>
+	</head>
+	
+	<script>
+		var app = angular.module("app",[]);
+
+			is_hide = false;
+
+	</script>
+	<body ng-app = "app">
+		<form>
+			
+			<input type="checkbox" name="is_hide" ng-model="is_hide">
+			<label for="is_hide"> Cacher </label>
+			<div style="margin-top:20px" ng-hide="is_hide">
+				Je veux me cacher
+			</div>
+		</form>
+	</body>
+
+</html>

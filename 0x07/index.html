@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="../js/angular.min.js"></script>
+	</head>
+	
+	<script>
+		var app = angular.module("app",[]);
+		app.controller("firstController", function($scope){
+			$scope.nb = 0;
+			$scope.addOneNb = function(){this.nb++}
+		
+		});
+	</script>
+	<body ng-app = "app" ng-controller = "firstController">
+			<div style="margin-top:20px">
+				{{nb}}
+			</div>
+			<button ng-click="addOneNb(nb)">Ajouter 1</button>
+	</body>
+
+</html>

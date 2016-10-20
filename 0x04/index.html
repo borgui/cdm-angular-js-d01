@@ -1,22 +1,19 @@
 <html>
 	<head>
+		<meta charset="utf-8"/>
 		<script src="../js/angular.min.js"></script>
 	</head>
 	
 	<script>
 		var app = angular.module("app",[]);
-
-		console.log(input);
 	</script>
-	<body ng-app = "app" >
+	<body ng-app = "app">
 		<form>
 			<input type="text" placeholder="Your name" ng-model="name">
 			<div style="margin-top:20px">
-				{{name}}
+				{{name | uppercase}}
 			</div>
 		</form>
-
-
 	</body>
 
 </html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="../js/angular.min.js"></script>
+	</head>
+	
+	<script>
+		var app = angular.module("app",[]);
+			is_hide = false;
+	</script>
+	<body ng-app = "app" >
+		<div ng-hide = "is_hide">
+		CA VA EXPLOSER
+		</div>
+
+	<button ng-click="is_hide = true" ng-hide = "is_hide">
+		Clique pour désamorcer
+	</button>
+	</body>
+
+</html>
