@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<script src="../js/angular.min.js"></script>
+	</head>
+	
+	<script>
+		var app = angular.module("app",[]);
+		app.controller("input", function($scope){
+		})
+		console.log(input);
+	</script>
+	<body ng-app = "app" ng-controller = "input">
+		<form>
+			<input type="text" placeholder="Your name" ng-model="input.name">
+			<div style="margin-top="20px">
+				{{input.name}}
+			</div>
+		</form>
+
+
+	</body>
+
+</html>
