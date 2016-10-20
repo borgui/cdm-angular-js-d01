@@ -7,16 +7,23 @@
 	<script>
 		var app = angular.module("app",[]);
 		app.controller("firstController", function($scope){
-			$scope.value = 9;
-			$scope.getValue = function(){return this.value}
+			$scope.name = "";
+			$scope.$watch("name", function(new_value, old_value){
+				if(new_value < old_value){
+					alert('Biim!');
+				}
+			});
+			
 		
 		});
 	</script>
 	<body ng-app = "app" ng-controller = "firstController">
-			<div style="margin-top:20px">
-				{{getValue()}}
-			</div>
-
+		<input type="text" ng-model="name"/>
+		<p>
+			{{name}}
+		</p>
 	</body>
+
+</html>
 
 </html>

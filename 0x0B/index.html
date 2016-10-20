@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="../js/angular.min.js"></script>
+	</head>
+	
+	<script>
+		var app = angular.module("app",[]);
+		app.service("FirstService", function(){
+			this.showElement = function(element){return element};
+			});
+		app.controller("FirstController", function(FirstService, $scope){
+			$scope.firstValue = 8;
+
+		});
+	</script>
+	<body ng-app = "app" ng-controller = "FirstController">
+			<div>
+				{{FirstService.showElement($scope.firstValue)}}
+			</div>
+	</body>
+
+</html>
+
+</html>

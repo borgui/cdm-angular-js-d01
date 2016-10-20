@@ -7,15 +7,21 @@
 	<script>
 		var app = angular.module("app",[]);
 		app.controller("firstController", function($scope){
-		})
+			$scope.firstValue = 5;
+			});
+		app.controller("secondController", function($scope){
+			$scope.firstValue = 2
+		});
 	</script>
 	<body ng-app = "app" ng-controller = "firstController">
-		<form>
-			<input type="text" placeholder="Your name" ng-model="firstController.name">
-			<div style="margin-top:20px">
-				{{firstController.name | uppercase}}
+			<div>
+			First controller = {{firstValue}}
 			</div>
-		</form>
+			<div style="margin-top:20px" ng-controller = "secondController">
+			Second value = {{$parent.firstValue}}
+			</div>
 	</body>
+
+</html>
 
 </html>

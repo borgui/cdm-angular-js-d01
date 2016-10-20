@@ -6,17 +6,18 @@
 	
 	<script>
 		var app = angular.module("app",[]);
-		app.controller("firstController", function($scope){
+		app.controller("FirstController", function($scope){
 			$scope.nb = 0;
 			$scope.addOneNb = function(){this.nb++}
 		
 		});
 	</script>
-	<body ng-app = "app" ng-controller = "firstController">
-			<div style="margin-top:20px">
+	<body ng-app = "app" ng-controller = "FirstController">
+			<span>
 				{{nb}}
-			</div>
-			<button ng-click="addOneNb(nb)">Ajouter 1</button>
+			</span>
+			<br/>
+			<button ng-click="addOneNb()">Add one</button>
 	</body>
 
 </html>
